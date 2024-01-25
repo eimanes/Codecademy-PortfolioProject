@@ -5,6 +5,27 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+console.log("Welcome to the 'I don't know what to do!'\n");
+console.log("We provide multiple service for Calendar\n");
+console.log("------------Services --------------------");
+console.log("1. Convert Gregorian to Hijri Calendar");
+console.log("2. Convert Hijri to Gregorian Calendar");
+console.log("3. Ask what day in Gregorian Calendar\n");
+
+function getUserOption() {
+    rl.question("Enter your option (1 or 2 or 3): ", function (userInput) {
+        console.log("\n");
+        if (userInput === '1') {
+            writeIslamicDate();
+        } else {
+            console.error("Invalid! Please try again");
+            getUserOption(); 
+        }
+    });
+}
+
+getUserOption();
+
 function gmod(n, m) {
     return ((n % m) + m) % m;
 }
@@ -122,5 +143,4 @@ function writeIslamicDate() {
     });
 }
 
-// Call the writeIslamicDate function to prompt the user for input
-writeIslamicDate();
+
