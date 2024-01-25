@@ -32,6 +32,7 @@ function convertGregorianToHijri(date) {
     return `${hijriYear}-${formattedHijriMonth}-${formattedHijriDay}`;
 }
 
-const gregorianDate = '2020-02-06';
+const gregorianDate = '2024-01-25';
 const hijriDate = convertGregorianToHijri(gregorianDate);
+
 console.log(hijriDate);
